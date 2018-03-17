@@ -1,22 +1,26 @@
 {
   "name": "ImageDetect",
-  "version": "0.1.0",
-  "summary": "A short description of ImageDetect.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/feghaldev@gmail.com/ImageDetect",
+  "version": "1.0.0",
+  "summary": "Crop faces, inside of your image, with Vision Api",
+  "description": "ImageDetect is a library developed on Swift. With ImageDetect you can easily detect and crop faces, texts or barcodes in your image with iOS 11 Vision api.",
+  "homepage": "https://github.com/Feghal/ImageDetect",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "feghaldev@gmail.com": "asahakyan@vtgsoftware.com"
+    "Arthur Sahakyan": "feghaldev@gmail.com"
   },
   "source": {
-    "git": "https://github.com/feghaldev@gmail.com/ImageDetect.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/Feghal/ImageDetect.git",
+    "tag": "1.0.0"
   },
+  "source_files": "ImageDetect/Classes/**/*",
   "platforms": {
-    "ios": "8.0"
+    "ios": "11.0"
   },
-  "source_files": "ImageDetect/Classes/**/*"
+  "frameworks": [
+    "UIKit",
+    "Vision"
+  ]
 }

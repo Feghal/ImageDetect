@@ -1,5 +1,4 @@
 import XCTest
-import ImageDetect
 
 class Tests: XCTestCase {
     
