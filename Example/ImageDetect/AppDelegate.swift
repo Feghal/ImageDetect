@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  ImageDetect
 //
-//  Created by feghaldev@gmail.com on 03/17/2018.
-//  Copyright (c) 2018 feghaldev@gmail.com. All rights reserved.
+//  Created by Arthur Sahakyan on 03/17/2018.
+//  Copyright (c) 2018 Arthur Sahakyan. All rights reserved.
 //
 
 import UIKit

@@ -1,0 +1,22 @@
+{
+  "name": "ImageDetect",
+  "version": "0.1.0",
+  "summary": "A short description of ImageDetect.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/feghaldev@gmail.com/ImageDetect",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "feghaldev@gmail.com": "asahakyan@vtgsoftware.com"
+  },
+  "source": {
+    "git": "https://github.com/feghaldev@gmail.com/ImageDetect.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "ImageDetect/Classes/**/*"
+}

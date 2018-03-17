@@ -1,6 +1,5 @@
 # ImageDetect
 
-[![CI Status](http://img.shields.io/travis/feghaldev@gmail.com/ImageDetect.svg?style=flat)](https://travis-ci.org/feghaldev@gmail.com/ImageDetect)
 [![Version](https://img.shields.io/cocoapods/v/ImageDetect.svg?style=flat)](http://cocoapods.org/pods/ImageDetect)
 [![License](https://img.shields.io/cocoapods/l/ImageDetect.svg?style=flat)](http://cocoapods.org/pods/ImageDetect)
 [![Platform](https://img.shields.io/cocoapods/p/ImageDetect.svg?style=flat)](http://cocoapods.org/pods/ImageDetect)
@@ -10,6 +9,9 @@
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
+Xcode 9.0 (beta) or higher.
+iOS 11.0 (beta) or higher.
+(It is possible to import this library under the iOS 11. But it won't be working.)
 
 ## Installation
 
@@ -22,7 +24,7 @@ pod 'ImageDetect'
 
 ## Author
 
-feghaldev@gmail.com, asahakyan@vtgsoftware.com
+Arthur Sahakyan, feghaldev@gmail.com
 
 ## License
 
