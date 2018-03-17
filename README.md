@@ -9,9 +9,8 @@
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
-Xcode 9.0 (beta) or higher.
-iOS 11.0 (beta) or higher.
-(It is possible to import this library under the iOS 11. But it won't be working.)
+1) Xcode 9.0 (beta) or higher.
+2)  iOS 11.0 (beta) or higher.
 
 ## Installation
 
@@ -21,6 +20,17 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'ImageDetect'
 ```
+Then, run the following command:
+```ruby
+pod install
+```
+### Manually
+
+1. Drag and Drop it into your project
+
+2. Import ImageDetect
+
+3. You are ready to go!
 
 ## Author
 

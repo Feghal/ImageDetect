@@ -15,6 +15,7 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		BBB7FE63819BD841F4EE5BFA /* Pods_ImageDetect_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 742DFA543B459FB22668379F /* Pods_ImageDetect_Tests.framework */; };
+		DEA87CF8205D545D0013E01E /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA87CF7205D545D0013E01E /* ImageCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,11 +43,12 @@
 		6607937143B0E566A214F80A /* Pods-ImageDetect_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageDetect_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ImageDetect_Example/Pods-ImageDetect_Example.release.xcconfig"; sourceTree = "<group>"; };
 		742DFA543B459FB22668379F /* Pods_ImageDetect_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageDetect_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		869C7BCB0723285644FD1E43 /* Pods-ImageDetect_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageDetect_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImageDetect_Example/Pods-ImageDetect_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		A4BE9B394385D70E00E89081 /* ImageDetect.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = ImageDetect.podspec; path = ../ImageDetect.podspec; sourceTree = "<group>"; };
-		BC3D6C0D6AB5A344840A2F37 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		A4BE9B394385D70E00E89081 /* ImageDetect.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ImageDetect.podspec; path = ../ImageDetect.podspec; sourceTree = "<group>"; };
+		BC3D6C0D6AB5A344840A2F37 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		CACE9B1577120CAEE339420D /* Pods-ImageDetect_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageDetect_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImageDetect_Tests/Pods-ImageDetect_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		D27F8DA16BFB0F3D422390A1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		D27F8DA16BFB0F3D422390A1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		D9AC185C22E742B9AFECBE87 /* Pods_ImageDetect_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageDetect_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEA87CF7205D545D0013E01E /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				DEA87CF7205D545D0013E01E /* ImageCollectionViewCell.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -215,10 +218,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = KEL568YDEB;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = KEL568YDEB;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -370,6 +375,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEA87CF8205D545D0013E01E /* ImageCollectionViewCell.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
@@ -517,7 +523,9 @@
 			baseConfigurationReference = 869C7BCB0723285644FD1E43 /* Pods-ImageDetect_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = KEL568YDEB;
 				INFOPLIST_FILE = ImageDetect/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -532,7 +540,9 @@
 			baseConfigurationReference = 6607937143B0E566A214F80A /* Pods-ImageDetect_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = KEL568YDEB;
 				INFOPLIST_FILE = ImageDetect/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -546,6 +556,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CACE9B1577120CAEE339420D /* Pods-ImageDetect_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = KEL568YDEB;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -567,6 +578,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5BCAB45F2F23B4FA8DCC246F /* Pods-ImageDetect_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = KEL568YDEB;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
