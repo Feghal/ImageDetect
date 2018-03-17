@@ -34,6 +34,26 @@ pod install
 
 3. You are ready to go!
 
+## Usage
+Crop your (UIImage or CGImage)
+```Swift
+
+// `type` in this method can be face, barcode or text
+image.detector.crop(type: .face) { [weak self] result in
+    switch result {
+        case .success(let croppedImages):
+            // When the `Vision` successfully find type of object you set and successfuly crops it.
+            print("Found")
+        case .notFound:
+            // When the image doesn't contain any type of object you did set, `result` will be `.notFound`.
+            print("Not Found")
+        case .failure(let error):
+            // When the any error occured, `result` will be `failure`.
+            print(error.localizedDescription)
+            }
+}
+```
+
 ## Author
 
 Arthur Sahakyan, feghaldev@gmail.com
