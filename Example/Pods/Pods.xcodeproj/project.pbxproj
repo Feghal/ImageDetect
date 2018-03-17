@@ -58,7 +58,7 @@
 		BED4D6BE4B74E51D0BFE03FA4CF1F2C2 /* Pods-ImageDetect_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ImageDetect_Example.release.xcconfig"; sourceTree = "<group>"; };
 		BFDB16EAF0D1E2E41D251D1D0A79A45E /* ImageDetect-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ImageDetect-dummy.m"; sourceTree = "<group>"; };
 		C38A15F335C999E306611229CF99BAFC /* ImageDetect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ImageDetect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DEA87CF3205D453E0013E01E /* ImageDetect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetect.swift; sourceTree = "<group>"; };
+		DEA87CF3205D453E0013E01E /* ImageDetect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageDetect.swift; path = ImageDetect/Classes/ImageDetect.swift; sourceTree = "<group>"; };
 		E18C95FBEBBFD659179CDC5596CE185E /* ImageDetect-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ImageDetect-umbrella.h"; sourceTree = "<group>"; };
 		EDF6E13386C7A59C5FB49927A1C72CBD /* Pods-ImageDetect_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ImageDetect_Tests-umbrella.h"; sourceTree = "<group>"; };
 		FFE05763FECA5E2D593EC165B38E86E6 /* Pods-ImageDetect_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ImageDetect_Tests.debug.xcconfig"; sourceTree = "<group>"; };
