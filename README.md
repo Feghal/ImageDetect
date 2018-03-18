@@ -5,8 +5,13 @@
 [![Platform](https://img.shields.io/cocoapods/p/ImageDetect.svg?style=flat)](http://cocoapods.org/pods/ImageDetect)
 
 ## Example
+<br>
+<br>
 
-<a href="url"><img src="https://github.com/Feghal/ImageDetect/blob/master/Screenshots/1.PNG" align="left" height="550" width="275" ></a>
+<a href="url"><img src="https://github.com/Feghal/ImageDetect/blob/master/Screenshots/1.PNG" align="top" height="550" width="275" ></a>
+
+<br>
+<br>
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
