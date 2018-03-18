@@ -6,7 +6,7 @@
 
 ## Example
 
-![Screenshot](https://raw.github.com/Feghal/ImageDetect/master/Screenshots/1.PNG)
+<a href="url"><img src="https://github.com/Feghal/ImageDetect/blob/master/Screenshots/1.PNG" align="left" height="550" width="275" ></a>
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
