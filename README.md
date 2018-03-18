@@ -6,7 +6,7 @@
 
 ## Example
 
-![ScreenShot](https://raw.github.com/Feghal/ImageDetect/master/Screenshots/1.png)
+![Screenshot](https://raw.github.com/Feghal/ImageDetect/master/Screenshots/1.PNG)
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
