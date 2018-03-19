@@ -9,6 +9,7 @@
 <br>
 
 <a href="url"><img src="https://github.com/Feghal/ImageDetect/blob/master/Screenshots/1.PNG" align="top" height="550" width="275" ></a>
+<a href="url"><img src="https://github.com/Feghal/ImageDetect/blob/master/Screenshots/2.PNG" align="top" height="550" width="275" ></a>
 
 <br>
 <br>

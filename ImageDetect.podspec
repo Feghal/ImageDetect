@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ImageDetect'
-  s.version          = '1.0.0'
+  s.version          = '1.1.0'
   s.summary          = 'With ImageDetect you can easily detect and crop faces, texts or barcodes in your image.'
 
 # This description is used to generate tags and improve search results.
