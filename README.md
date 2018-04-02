@@ -1,5 +1,5 @@
 # ImageDetect
-
+[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 [![Version](https://img.shields.io/cocoapods/v/ImageDetect.svg?style=flat)](http://cocoapods.org/pods/ImageDetect)
 [![License](https://img.shields.io/cocoapods/l/ImageDetect.svg?style=flat)](http://cocoapods.org/pods/ImageDetect)
 [![Platform](https://img.shields.io/cocoapods/p/ImageDetect.svg?style=flat)](http://cocoapods.org/pods/ImageDetect)
