@@ -5,9 +5,6 @@
 //  Created by Arthur Sahakyan on 3/17/18.
 //
 
-import Foundation
-
-
 import UIKit
 import Vision
 
@@ -53,7 +50,7 @@ public extension ImageDetect where T: CGImage {
         }
     }
     
-    func cropFace(_ completion: @escaping (ImageDetectResult<CGImage>) -> Void) {
+    private func cropFace(_ completion: @escaping (ImageDetectResult<CGImage>) -> Void) {
         guard #available(iOS 11.0, *) else {
             return
         }
@@ -92,7 +89,7 @@ public extension ImageDetect where T: CGImage {
         }
     }
     
-    func cropBarcode(_ completion: @escaping (ImageDetectResult<CGImage>) -> Void) {
+    private func cropBarcode(_ completion: @escaping (ImageDetectResult<CGImage>) -> Void) {
         guard #available(iOS 11.0, *) else {
             return
         }
@@ -132,7 +129,7 @@ public extension ImageDetect where T: CGImage {
         }
     }
     
-    func cropText(_ completion: @escaping (ImageDetectResult<CGImage>) -> Void) {
+    private func cropText(_ completion: @escaping (ImageDetectResult<CGImage>) -> Void) {
         guard #available(iOS 11.0, *) else {
             return
         }
