@@ -72,7 +72,7 @@ public extension ImageDetect where T: CGImage {
                 let faceImage = self.detectable.cropping(to: croppingRect)
                 
                 return faceImage
-            }).flatMap { $0 }
+            }).compactMap { $0 }
             
             guard let result = faceImages, result.count > 0 else {
                 completion(.notFound)
@@ -112,7 +112,7 @@ public extension ImageDetect where T: CGImage {
                 let codeImage = self.detectable.cropping(to: croppingRect)
                 
                 return codeImage
-            }).flatMap { $0 }
+            }).compactMap { $0 }
             
             guard let result = codeImages, result.count > 0 else {
                 completion(.notFound)
@@ -152,7 +152,7 @@ public extension ImageDetect where T: CGImage {
                 let textImage = self.detectable.cropping(to: croppingRect)
                 
                 return textImage
-            }).flatMap { $0 }
+            }).compactMap { $0 }
             
             guard let result = textImages, result.count > 0 else {
                 completion(.notFound)

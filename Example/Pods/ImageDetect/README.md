@@ -5,6 +5,14 @@
 [![Platform](https://img.shields.io/cocoapods/p/ImageDetect.svg?style=flat)](http://cocoapods.org/pods/ImageDetect)
 
 ## Example
+<br>
+<br>
+
+<a href="url"><img src="https://github.com/Feghal/ImageDetect/blob/master/Screenshots/1.PNG" align="top" height="550" width="275" ></a>
+<a href="url"><img src="https://github.com/Feghal/ImageDetect/blob/master/Screenshots/2.PNG" align="top" height="550" width="275" ></a>
+
+<br>
+<br>
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
@@ -33,6 +41,26 @@ pod install
 2. Import `ImageDetect`
 
 3. You are ready to go!
+
+## Usage
+Crop your (UIImage or CGImage)
+```Swift
+
+// `type` in this method can be face, barcode or text
+image.detector.crop(type: .face) { [weak self] result in
+    switch result {
+        case .success(let croppedImages):
+            // When the `Vision` successfully find type of object you set and successfuly crops it.
+            print("Found")
+        case .notFound:
+            // When the image doesn't contain any type of object you did set, `result` will be `.notFound`.
+            print("Not Found")
+        case .failure(let error):
+            // When the any error occured, `result` will be `failure`.
+            print(error.localizedDescription)
+            }
+}
+```
 
 ## Author
 

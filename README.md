@@ -56,7 +56,7 @@ image.detector.crop(type: .face) { [weak self] result in
         case .failure(let error):
             // When the any error occured, `result` will be `failure`.
             print(error.localizedDescription)
-            }
+        }
 }
 ```
 

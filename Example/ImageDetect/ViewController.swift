@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     
     var images: [UIImage] = []
     let imagePickerController = UIImagePickerController()
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         imagePickerController.sourceType = .photoLibrary
         imagePickerController.delegate = self
     }
-
+    
     private func cropFaces() {
         guard let image = imageView.image else { return }
         
@@ -40,7 +40,7 @@ class ViewController: UIViewController {
                 self?.images = croppedImages
                 self?.collectionView.reloadData()
             case .notFound:
-            // When the image doesn't contain any type of object you did set, `result` will be `.notFound`.
+                // When the image doesn't contain any type of object you did set, `result` will be `.notFound`.
                 print("Not Found")
             case .failure(let error):
                 // When the any error occured, `result` will be `failure`.
