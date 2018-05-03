@@ -5,9 +5,6 @@
 //  Created by Arthur Sahakyan on 3/17/18.
 //
 
-import Foundation
-
-
 import UIKit
 import Vision
 
@@ -53,7 +50,7 @@ public extension ImageDetect where T: CGImage {
         }
     }
     
-    func cropFace(_ completion: @escaping (ImageDetectResult<CGImage>) -> Void) {
+    private func cropFace(_ completion: @escaping (ImageDetectResult<CGImage>) -> Void) {
         guard #available(iOS 11.0, *) else {
             return
         }
@@ -75,7 +72,7 @@ public extension ImageDetect where T: CGImage {
                 let faceImage = self.detectable.cropping(to: croppingRect)
                 
                 return faceImage
-            }).flatMap { $0 }
+            }).compactMap { $0 }
             
             guard let result = faceImages, result.count > 0 else {
                 completion(.notFound)
@@ -92,7 +89,7 @@ public extension ImageDetect where T: CGImage {
         }
     }
     
-    func cropBarcode(_ completion: @escaping (ImageDetectResult<CGImage>) -> Void) {
+    private func cropBarcode(_ completion: @escaping (ImageDetectResult<CGImage>) -> Void) {
         guard #available(iOS 11.0, *) else {
             return
         }
@@ -115,7 +112,7 @@ public extension ImageDetect where T: CGImage {
                 let codeImage = self.detectable.cropping(to: croppingRect)
                 
                 return codeImage
-            }).flatMap { $0 }
+            }).compactMap { $0 }
             
             guard let result = codeImages, result.count > 0 else {
                 completion(.notFound)
@@ -132,7 +129,7 @@ public extension ImageDetect where T: CGImage {
         }
     }
     
-    func cropText(_ completion: @escaping (ImageDetectResult<CGImage>) -> Void) {
+    private func cropText(_ completion: @escaping (ImageDetectResult<CGImage>) -> Void) {
         guard #available(iOS 11.0, *) else {
             return
         }
@@ -155,7 +152,7 @@ public extension ImageDetect where T: CGImage {
                 let textImage = self.detectable.cropping(to: croppingRect)
                 
                 return textImage
-            }).flatMap { $0 }
+            }).compactMap { $0 }
             
             guard let result = textImages, result.count > 0 else {
                 completion(.notFound)

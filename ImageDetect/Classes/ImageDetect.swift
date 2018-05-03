@@ -27,9 +27,6 @@ public struct ImageDetect<T> {
     }
 }
 
-public protocol ImageCroppable {
-}
-
 public extension ImageCroppable {
     var detector: ImageDetect<Self> {
         return ImageDetect(self)
@@ -62,15 +59,7 @@ public extension ImageDetect where T: CGImage {
             
             let faceImages = request.results?.map({ result -> CGImage? in
                 guard let face = result as? VNFaceObservation else { return nil }
-                
-                let width = face.boundingBox.width * CGFloat(self.detectable.width)
-                let height = face.boundingBox.height * CGFloat(self.detectable.height)
-                let x = face.boundingBox.origin.x * CGFloat(self.detectable.width)
-                let y = (1 - face.boundingBox.origin.y) * CGFloat(self.detectable.height) - height
-                
-                let croppingRect = CGRect(x: x, y: y, width: width, height: height)
-                let faceImage = self.detectable.cropping(to: croppingRect)
-                
+                let faceImage = self.cropImage(object: face)
                 return faceImage
             }).compactMap { $0 }
             
@@ -102,15 +91,7 @@ public extension ImageDetect where T: CGImage {
             
             let codeImages = request.results?.map({ result -> CGImage? in
                 guard let code = result as? VNBarcodeObservation else { return nil }
-                
-                let width = code.boundingBox.width * CGFloat(self.detectable.width)
-                let height = code.boundingBox.height * CGFloat(self.detectable.height)
-                let x = code.boundingBox.origin.x * CGFloat(self.detectable.width)
-                let y = (1 - code.boundingBox.origin.y) * CGFloat(self.detectable.height) - height
-                
-                let croppingRect = CGRect(x: x, y: y, width: width, height: height)
-                let codeImage = self.detectable.cropping(to: croppingRect)
-                
+                let codeImage = self.cropImage(object: code)
                 return codeImage
             }).compactMap { $0 }
             
@@ -142,15 +123,7 @@ public extension ImageDetect where T: CGImage {
             
             let textImages = request.results?.map({ result -> CGImage? in
                 guard let text = result as? VNTextObservation else { return nil }
-                
-                let width = text.boundingBox.width * CGFloat(self.detectable.width)
-                let height = text.boundingBox.height * CGFloat(self.detectable.height)
-                let x = text.boundingBox.origin.x * CGFloat(self.detectable.width)
-                let y = (1 - text.boundingBox.origin.y) * CGFloat(self.detectable.height) - height
-                
-                let croppingRect = CGRect(x: x, y: y, width: width, height: height)
-                let textImage = self.detectable.cropping(to: croppingRect)
-                
+                let textImage = self.cropImage(object: text)
                 return textImage
             }).compactMap { $0 }
             
@@ -167,6 +140,17 @@ public extension ImageDetect where T: CGImage {
         } catch let error {
             completion(.failure(error))
         }
+    }
+    
+    private func cropImage(object: VNDetectedObjectObservation) -> CGImage? {
+        let width = object.boundingBox.width * CGFloat(self.detectable.width)
+        let height = object.boundingBox.height * CGFloat(self.detectable.height)
+        let x = object.boundingBox.origin.x * CGFloat(self.detectable.width)
+        let y = (1 - object.boundingBox.origin.y) * CGFloat(self.detectable.height) - height
+        
+        let croppingRect = CGRect(x: x, y: y, width: width, height: height)
+        let image = self.detectable.cropping(to: croppingRect)
+        return image
     }
 }
 
@@ -194,6 +178,3 @@ public extension ImageDetect where T: UIImage {
     }
     
 }
-
-extension NSObject: ImageCroppable {}
-extension CGImage: ImageCroppable {}
