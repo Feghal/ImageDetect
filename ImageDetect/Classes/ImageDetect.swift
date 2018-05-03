@@ -8,12 +8,30 @@
 import UIKit
 import Vision
 
+extension NSObject: ImageCroppable {}
+extension CGImage: ImageCroppable {}
+public protocol ImageCroppable {}
+
+/**
+ This enumeration is for identification of detection type
+ 
+ - face: for cropping faces
+ - barcode: for croping barcodes
+ - text: for cropping text rectangles
+ */
 public enum DetectionType {
     case face
     case barcode
     case text
 }
 
+/**
+ This enumeration is for identification of request type
+ 
+ - success: successfuly cropted objects
+ - notFound: not found some object of `DetectionType` in image
+ - failure: failed with error
+ */
 public enum ImageDetectResult<T> {
     case success([T])
     case notFound
@@ -35,6 +53,11 @@ public extension ImageCroppable {
 
 public extension ImageDetect where T: CGImage {
     
+    /**
+     To crop object in image
+     - parameter type: type of object that must be croped
+     - parameter completion: callbeck with `ImageDetectResult<T>` with error or success response
+     */
     func crop(type: DetectionType, completion: @escaping (ImageDetectResult<CGImage>) -> Void) {
         switch type {
         case .face:
