@@ -1,5 +1,7 @@
+# Adapted from https://www.gitignore.io/api/xcode,swift,cocoapods
 
-# Created by https://www.gitignore.io/api/xcode,swift,cocoapods
+# Finder
+.DS_Store
 
 ### CocoaPods ###
 ## CocoaPods GitIgnore Template

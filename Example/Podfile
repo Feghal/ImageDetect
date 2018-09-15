@@ -4,10 +4,4 @@ target 'ImageDetect_Example' do
   pod 'ImageDetect', :path => '../'
 #  pod 'ImageDetect', :git => 'https://github.com/Feghal/ImageDetect.git'
 #  pod 'ImageDetect'
-
-  target 'ImageDetect_Tests' do
-    inherit! :search_paths
-
-    
-  end
 end
