@@ -6,11 +6,11 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   ImageDetect:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  ImageDetect: 5ad472f8bb2d92fc28696b749468697a94491eca
+  ImageDetect: d870e065462934ba2aa5671635aeb9eb6549dfee
 
 PODFILE CHECKSUM: d5e758eee17e883e89ac81f746bfb25f47d4f6bf
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.5.3
