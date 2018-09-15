@@ -13,10 +13,10 @@ import Photos
 class ViewController: UIViewController {
     @IBOutlet private weak var imageView: UIImageView!
     @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
     
     var images: [UIImage] = []
     let imagePickerController = UIImagePickerController()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,24 +27,31 @@ class ViewController: UIViewController {
         
         imagePickerController.sourceType = .photoLibrary
         imagePickerController.delegate = self
+        
+        activityIndicator.hidesWhenStopped = true
     }
     
     private func cropFaces() {
         guard let image = imageView.image else { return }
-        
-        // `type` in this method can be face, barcode or text
-        image.detector.crop(type: .face) { [weak self] result in
-            switch result {
-            case .success(let croppedImages):
-                // When the `Vision` successfully find type of object you set and successfuly crops it.
-                self?.images = croppedImages
-                self?.collectionView.reloadData()
-            case .notFound:
-                // When the image doesn't contain any type of object you did set, `result` will be `.notFound`.
-                print("Not Found")
-            case .failure(let error):
-                // When the any error occured, `result` will be `failure`.
-                print(error.localizedDescription)
+        activityIndicator.startAnimating()
+        DispatchQueue.global().async {
+            // `type` in this method can be face, barcode or text
+            image.detector.crop(type: .face) { result in
+                DispatchQueue.main.async { [weak self] in
+                    switch result {
+                    case .success(let croppedImages):
+                        // When the `Vision` successfully find type of object you set and successfuly crops it.
+                        self?.images = croppedImages
+                        self?.collectionView.reloadData()
+                    case .notFound:
+                        // When the image doesn't contain any type of object you did set, `result` will be `.notFound`.
+                        print("Not Found")
+                    case .failure(let error):
+                        // When the any error occured, `result` will be `failure`.
+                        print(error.localizedDescription)
+                    }
+                    self?.activityIndicator.stopAnimating()
+                }
             }
         }
     }
