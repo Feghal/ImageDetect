@@ -126,7 +126,6 @@
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
 				3A54C5444B5ACDA5B280B61A /* [CP] Embed Pods Frameworks */,
-				CB585FAFE61B996F50D1A384 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -191,7 +190,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ImageDetect_Example/Pods-ImageDetect_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-ImageDetect_Example/Pods-ImageDetect_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ImageDetect/ImageDetect.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -200,26 +199,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ImageDetect_Example/Pods-ImageDetect_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CB585FAFE61B996F50D1A384 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ImageDetect_Example/Pods-ImageDetect_Example-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ImageDetect_Example/Pods-ImageDetect_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E54664A69D6DE6E0037D85DD /* [CP] Check Pods Manifest.lock */ = {

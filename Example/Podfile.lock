@@ -1,16 +1,16 @@
 PODS:
-  - ImageDetect (1.1.3)
+  - ImageDetect (1.1.4)
 
 DEPENDENCIES:
   - ImageDetect (from `../`)
 
 EXTERNAL SOURCES:
   ImageDetect:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  ImageDetect: 0235c4eeb435a73e643fbe6149c60fc8513a6581
+  ImageDetect: cff4ef43d8cb22cb5bfdd3134f4224f637c3d372
 
 PODFILE CHECKSUM: dc7e4c2540a30f5fbd1721d7c39a8dca9da76b86
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.6.1
